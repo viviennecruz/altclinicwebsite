@@ -1,0 +1,74 @@
+html, body {
+    background-color: #fffafb;
+    font-family: 'Pragati Narrow', sans-serif;
+    position: relative;
+}
+
+p {
+    font-size: 20px;
+}
+
+li {
+    font-size: 18px;
+}
+
+.form-check-label {
+    font-size: 20px;
+}
+
+.form-label {
+    font-size: 20px;
+}
+
+#home {
+    text-align: center;
+    height: 50%;
+    background-image: url("images/dog.jpg");
+}
+
+#aboutus {
+    height: 100%;
+}
+
+#ourservices {
+    height: 100%;
+}
+
+#bookings {
+    height: 100%;
+}
+
+#experts {
+    width: 80%;
+    margin: 20px;
+}
+
+.navbar {
+    color: #fff;
+}
+.navbar li a, .navbar .navbar-brand {
+    color:black;
+  }
+  
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color:  rgb(172, 55, 90) !important;
+  }
+  
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+.address {
+    margin: 0;
+}
+
+.logo {
+    width: 50%;
+
+}
+
+.lightpink {
+    background-color: #FFD1DF;
+    padding: 7px;
+}
