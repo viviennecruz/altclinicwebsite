@@ -3,10 +3,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- stylesheets -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- jquery -->
+        <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+        <!-- <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css"> -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- my own js script -->
+        <script src="scripts/index.js"></script>
         <title>Vivienne's Animal Hospital</title>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -71,7 +83,7 @@
             <div id="aboutus">
                 <div class="row">
                     <div class="col">
-                        <h1>meet the team</h1>
+                        <h1>meet the team <img src="images/icons8-name-tag-64.png" alt=""></h1>
                     </div>
                 </div>
                 <div class="row">
@@ -104,7 +116,7 @@
             <div id="ourservices">
                 <div class="row">
                     <div class="col">
-                        <h1>our services</h1>
+                        <h1>our services <img src="images/icons8-trust-64.png" alt=""></h1>
                         <h3>we offer a wide range of services including medical, diagnostic, surgical, and preventive health care needs for your pets.</h3>
                     </div>
                 </div>
@@ -131,8 +143,8 @@
             <div id="bookings">
                 <div class="row">
                     <div class="col">
-                        <h1>appointment bookings</h1>
-                        <h3>fill out the following to book an appointment</h3>
+                        <h1>appointment bookings <img src="images/icons8-planner-64.png" alt=""></h1>
+                        <h3>fill out the following to book an appointment for your pet</h3>
                     </div>
                 </div>
 
@@ -201,7 +213,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <h4>contact information</h1>
+                        <h3>contact information <img src="images/icons8-office-phone-64.png" alt="" style="width: 50px;"></h3>
                     </div>
                 </div>
 
@@ -237,73 +249,42 @@
                     </div>
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="phone" class="form-label">phone</label>
+                            <label for="phone" class="form-label">phone number</label>
                             <input type="text" class="form-control" id="phone">
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row" style="margin-bottom: 10px;">
                     <div class="col">
-                        <h4>select appointment date and time</h4>
+                        <h3>select expert <img src="images/icons8-people-64.png" alt="" style="width:50px;"></h3>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <div class="col-6">
+                        <select class="form-select" id="selectExpert" aria-label="expert name">
+                            <option value="cruz">dr. vivienne cruz</option>
+                            <option value="loodu">dr. taj loodu</option>
+                            <option value="yee">dr. vivianne yee</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px;">
+                    <div class="col">
+                        <h3>select appointment date and time <img src="images/icons8-schedule-64.png" alt="" style="width: 50px;"></h3>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-4">
-                        <select class="form-select" aria-label="month">
-                            <option selected>January</option>
-                            <option value="February">February</option>
-                            <option value="March">March</option>
-                            <option value="April">April</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="August">August</option>
-                            <option value="September">September</option>
-                            <option value="October">October</option>
-                            <option value="November">November</option>
-                            <option value="December">December</option>
-                        </select>
+                    <div class="col-6">  
+                        <label class="form-label">date</label>
+                        <input type="text" class="form-control" id="dateInput">
                     </div>
 
-                    <div class="col-4">
-                        <select class="form-select" aria-label="date">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option >12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            <option value="16">16</option>
-                            <option value="17">17</option>
-                            <option value="18">18</option>
-                            <option value="19">19</option>
-                            <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
-                            <option value="23">23</option>
-                            <option >24</option>
-                            <option value="25">25</option>
-                            <option value="26">26</option>
-                            <option value="27">27</option>
-                            <option value="28">28</option>
-                            <option value="29">29</option>
-                            <option value="30">30</option>
-                            <option value="31">31</option>
-                        </select>
-                    </div>
-
-                    <div class="col-4">
+                    <div class="col-6">
+                        <label for="lastName" class="form-label">time</label>
                         <select class="form-select" aria-label="time">
                             <option value="1">8:00am</option>
                             <option value="2">9:00am</option>
@@ -318,16 +299,128 @@
                         </select>
                     </div>
                 </div>
+                
+        <form action="/action_page.php">
+    
+            <div class="row">
+                <div class="col-6">
+                    <h3>billing address <img src="images/icons8-business-building-64.png" alt="" style="width: 50px;"></h3>
+                </div>
 
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-outline-dark" style="margin-top: 20px;">submit</button>
+                <div class="col-6">
+                    <h3>payment <img src="images/icons8-online-payment-64.png" alt="" style="width: 50px;"></h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-dark" id="paymentinfo" data-bs-toggle="tooltip" data-bs-placement="right" title="we have a $10 last-minute cancellation fee. otherwise, your card will not be charged until you pay at the clinic.">
+                    <!-- <button type="button" class="btn btn-outline-dark" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="we have a $10 last-minute cancellation fee. otherwise, your card will not be charged until you pay at the clinic."> -->
+                        why do we need your payment information?
+                    </button>
+                    <!-- <a tabindex="0" class="btn btn-outline-dark" style="margin-top: 7px;"role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="why do we need your payment information?" data-bs-content="we have a $10 last-minute cancellation fee. otherwise, your card will not be charged until you pay at the clinic.">why do we need your payment information?</a> -->
+                </div>
+
+                <div class="col-6">
+                    <label for="fname">accepted cards</label>
+                    <div class="icon-container">
+                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                        <i class="fa fa-cc-discover" style="color:orange;"></i>
                     </div>
                 </div>
-            </div>   
-        </div>
+            </div>
+                
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">full name</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="John M. Doe">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">name on card</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="John More Doe">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">email</label>
+                        <input type="email" class="form-control" id="email" placeholder="john@example.com">
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="debit" class="form-label">credit card number</label>
+                        <input type="text" class="form-control" id="debit" title="we have a $10 last-minute cancellation fee. otherwise, your card will not be charged until you pay at the clinic." placeholder="1111-2222-3333-4444">
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="cvv" class="form-label">cvv</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="123">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="adr" class="form-label">address</label>
+                        <input type="text" class="form-control" id="adr" placeholder="542 W. 15th Street">
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="expmonth" class="form-label">exp month</label>
+                        <input type="text" class="form-control" id="expmonth" placeholder="September">
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="mb-3">
+                        <label for="expyear" class="form-label">exp year</label>
+                        <input type="text" class="form-control" id="expyear" placeholder="2022">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label for="city" class="form-label">city</label>
+                        <input type="text" class="form-control" id="city" placeholder="Ottawa">
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label for="province" class="form-label">province</label>
+                        <input type="text" class="form-control" id="province" placeholder="ON">
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="mb-3">
+                        <label for="zip" class="form-label">postal code</label>
+                        <input type="text" class="form-control" id="zip" placeholder="K1N 6E7">
+                    </div>
+                </div>
+            </div>
+        
+            <input type="submit" value="submit" class="btn btn-outline-dark" id="apptsubmit" style="margin-top: 7px;">
+        </form>
             
-        <div class="container-fluid">    
+        <!-- <div class="container-fluid">     -->
             <div class="lightpink" id="contactus">
                 <div class="row" style="padding: 10px;">
                     <div class="col-4">
@@ -344,8 +437,8 @@
                         <p class="address">Wednesday:  8:00am - 6:00pm</p> 
                         <p class="address">Thursday:  8:00am - 6:00pm</p> 
                         <p class="address">Friday:  8:00am - 6:00pm</p> 
-                        <p class="address">Saturday:  10:00am - 5:00pm</p> 
-                        <p class="address">Tuesday:  10:00am - 4:00pm</p> 
+                        <p class="address">Saturday:  8:00am - 6:00pm</p> 
+                        <p class="address">Sunday:  closed</p> 
                     </div>
 
                     <div class="col-4">
@@ -361,12 +454,12 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label for="email" class="form-label">email address</label>
-                                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                        <input type="email" class="form-control" id="email" placeholder="name@example.com"">
                                     </div>
                                 </div>
                             </div>
                             <textarea class="form-control" rows="5" id="comment"></textarea>
-                            <button type="button" class="btn btn-outline-dark" style="margin-top: 7px;">submit</button>
+                            <button type="button" class="btn btn-outline-dark" id="qasubmit" style="margin-top: 7px;">submit</button>
                         </div>
                     </div>
                 </div>
@@ -377,10 +470,8 @@
                     </div>
                 </div>
             </div>        
-        </div>
-
+     
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     </body>
 </html>

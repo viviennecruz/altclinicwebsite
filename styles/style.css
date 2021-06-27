@@ -71,4 +71,12 @@ li {
 .lightpink {
     background-color: #FFD1DF;
     padding: 7px;
+    margin: 0;
 }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
