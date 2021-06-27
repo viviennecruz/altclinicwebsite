@@ -60,6 +60,8 @@ function disableDates(date) {
     // Sunday is Day 0, disable all Sundays
     if (date.getDay() === 0)
         return [false];
+    if (date.getDay() === 6)
+        return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
 }
@@ -116,6 +118,28 @@ $(document).ready(function(){
         }
     });
 
+    $("#qaemail").on("change", function(){
+        if (!validateEmail("qaemail")){
+            alert("Wrong format for email. Please enter an email address with the following format: name@email.com");
+            $("#qaemail").val("name@email.com");
+            $("#qaemail").addClass("error");
+        }
+        else {
+            $("#qaemail").removeClass("error");
+        }
+    });
+
+    $("#billemail").on("change", function(){
+        if (!validateEmail("billemail")){
+            alert("Wrong format for email. Please enter an email address with the following format: name@email.com");
+            $("#billemail").val("name@email.com");
+            $("#billemail").addClass("error");
+        }
+        else {
+            $("#billemail").removeClass("error");
+        }
+    });
+
     $("#selectExpert").on("change", function(){
         if(this.value == "cruz") {
             unavailableDates = ["06/3/2021","06/10/2021","06/17/2021","06/24/2021", "07/1/2021", "07/8/2021"];
@@ -129,10 +153,14 @@ $(document).ready(function(){
         }
     });
 
+    $("selectExpert").on("input", function() {
+        doctorChosen = $(this).val().trigger("input");
+    })
+
     // $("selectExpert").on("click", function(){
         if($("#selectExpert").val() == "cruz") {
             unavailableDates = ["06/3/2021","06/10/2021","06/17/2021","06/24/2021", "07/1/2021", "07/8/2021"];
-            doctorChosen = "Dr. Vivienne Cruz";
+            // doctorChosen = "Dr. Vivienne Cruz";
         } 
         // if ($("#selectExpert").val() == "yee") {
         //     unavailableDates = ["06/4/2021","06/11/2021","06/18/2021","06/25/2021", "07/2/2021", "07/9/2021"];
@@ -143,11 +171,12 @@ $(document).ready(function(){
         //     console.log("taj");
         // }
     // });
+
     function greet( event ) {
-        alert(event.data.name + "check your email for a confirmation email.");
+        alert(event.data.name + "please check your inbox for a confirmation email.");
       }
       $( "#apptsubmit" ).on( "click", {
-        name: "Your appointment with " + doctorChosen + " on " + $( "#dateInput" ).val() + " has been successfully booked, "
+        name: "Your appointment for your pet has been successfully booked, "
       }, greet );
       $( "#qasubmit" ).on( "click", {
         name: "Your inquiry has been successfully sent, "
